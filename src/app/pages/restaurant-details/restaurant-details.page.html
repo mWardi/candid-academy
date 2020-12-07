@@ -1,0 +1,20 @@
+<ion-content class="speaker-detail">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/app/restaurants"></ion-back-button>
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-slides *ngIf="restaurant">
+        <ion-slide *ngFor="let cover of restaurant.cover">
+          <img [src]="cover.url" [alt]="restaurant.name + ' cover'">
+        </ion-slide>
+      </ion-slides>
+    </ion-item>
+    <ion-item></ion-item>
+  </ion-list>
+</ion-content>
